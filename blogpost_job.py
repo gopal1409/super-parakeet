@@ -15,7 +15,7 @@ class BlogpostJob:
             .withColumn('fullname', F.concat_ws(' ', F.col('firstname'), F.col('lastname')))
         )
 
-        df.repartition(1).write.mode('overwrite').parquet('s3://datashift-playground-dev/blogpost/data/')
+        df.repartition(1).write.mode('overwrite').parquet('s3://datashiftgopal-playground-dev/blogpost/data/')
 
     @staticmethod
     def data():
